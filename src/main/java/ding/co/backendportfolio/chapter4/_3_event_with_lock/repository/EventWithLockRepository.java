@@ -15,6 +15,7 @@ public interface EventWithLockRepository extends JpaRepository<EventWithLock, Lo
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("select e from EventWithLock e where e.id = :id")
     Optional<EventWithLock> findByIdWithPessimisticLock(Long id);
+    // SELECT * FROM accounts WHERE id = 1 FOR UPDATE;   X LOCK
 
     @Lock(LockModeType.OPTIMISTIC)
     @Query("select e from EventWithLock e where e.id = :id")

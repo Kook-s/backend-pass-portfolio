@@ -72,6 +72,18 @@ class HotKeyTest extends AbstractBookTest {
         sleep(3000);
     }
 
+//    [DB Call Stats]
+//    NAME               JITTER 적용   // 테스트 케이스 이름,
+//    Key Size:               5   // db 조회 시간 갯수(0.1초 단위)
+//    Total DB Calls:       300   // 전체 구간 동안의 총 DB 호출 횟수
+//    CV:                  0.29   // 변동계수(CV) - 평균 대비 상대적 분산 정도. 값이 클수록 요청량의 시간적 쏠림이 큼
+
+//    [DB Call Stats]
+//    NAME               Hot Key + 락 적용   // 테스트 케이스 이름,
+//    Key Size:               4   // db 조회 시간 갯수(0.1초 단위)
+//    Total DB Calls:         4   // 전체 구간 동안의 총 DB 호출 횟수
+//    CV:                  0.00   // 변동계수(CV) - 평균 대비 상대적 분산 정도. 값이 클수록 요청량의 시간적 쏠림이 큼
+
     @Test
     @DisplayName("Hot Key - 락 적용 후 DB 요청 제어")
     void hotKeyWithLock() throws Exception {

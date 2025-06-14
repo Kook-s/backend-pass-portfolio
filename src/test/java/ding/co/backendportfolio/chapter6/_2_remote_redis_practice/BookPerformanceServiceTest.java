@@ -6,7 +6,7 @@ import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 
-class BookPerformanceServiceTest extends AbstractBookTest {
+class ockerBookPerformanceServiceTest extends AbstractBookTest {
 
     @Autowired
     private BookPerformanceService bookPerformanceService;
